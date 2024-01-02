@@ -467,7 +467,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameManager: {fileID: 628692834}
-  clockAnimate: {fileID: 0}
 --- !u!114 &628692834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,8 +479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709c166583c084dec838c1d5856ba628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClockAnimate: {fileID: 0}
-  Mainthread: {fileID: 0}
 --- !u!1 &864754662
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770570560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 107.1, z: -3168}
 =======
@@ -961,6 +959,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 107.1, z: -3168}
 >>>>>>> 0fb5a19a9f9dc4cf07b45b06b94d23d18782f73d
 >>>>>>> Stashed changes
+=======
+  m_LocalPosition: {x: 0, y: 43, z: -3168}
+>>>>>>> parent of 0fb5a19a9 (testChange)
   m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 1
   m_Children: []
