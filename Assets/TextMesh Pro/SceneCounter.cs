@@ -15,28 +15,43 @@ public class SceneCounter : MonoBehaviour
     public Player_progress progress;
     public GameManager GameManager;
 
+    public delegate void ProgressUpdate();
+
+    public static ProgressUpdate level1Delegate;
+    public static ProgressUpdate level2Delegate;
+    public static ProgressUpdate level3Delegate;
+    public ProgressUpdate level4Delegate;
+    public ProgressUpdate level5Delegate;
     void Update()
     {
-        if (sceneNum == 1)
+        switch (sceneNum)
         {
-            // level one
-            if (Texttonumber() == 0)
-            {
-                progress.progress[0] = true;
-                DontDestroyOnLoad(progress);
-                GameManager.loadLevelSelection();
-                // unlock the next level
-                // move back to the original scene
-            }
-        }
-        else
-        {
-            // level two
-            if (Texttonumber() == 0)
-            {
-                //GameManager.level3Unlock = true;
-                GameManager.loadLevelSelection();
-            }
+            case 1:
+                // level one
+                if (Texttonumber() == 0)
+                {
+                    //level1Delegate?.Invoke();
+                    progress.progress[0] = true;
+                    DontDestroyOnLoad(progress);
+                    GameManager.loadLevelSelection();
+                    // unlock the next level
+                    // move back to the original scene
+                }
+                break;
+            
+            case 2:
+                if (Texttonumber() == 0)
+                {
+                    //level2Delegate?.Invoke();
+                    //GameManager.level3Unlock = true;
+                    GameManager.loadLevelSelection();
+                }
+                break;
+            
+            default:
+                throw new NullReferenceException("invalid level selection");
+                break;
+                
         }
     }
 
